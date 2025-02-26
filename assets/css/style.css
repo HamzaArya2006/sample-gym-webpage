@@ -728,14 +728,12 @@ html{
     color: var(--text-color);
     transition: all 0.3s ease; /* Smooth transition for focus effect */
 }
-
 .contact-sec .contact-form input:focus,
 .contact-sec .contact-form textarea:focus {
     outline: none;
     border-color: var(--primary-color); /* Focus border color */
     box-shadow: 0 0 8px var(--primary-color); /* Glowing focus effect */
 }
-
 .contact-sec .contact-form button {
     background: linear-gradient(45deg, var(--primary-color), var(--accent-color)); /* Gradient background */
     color: var(--background-color);
@@ -747,18 +745,13 @@ html{
     transition: all 0.3s ease-in-out;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); /* Button shadow */
 }
-
 .contact-sec .contact-form button:hover {
     transform: translateY(-3px); /* Slight lift effect on hover */
     box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4); /* Increased shadow on hover */
     background: linear-gradient(45deg, var(--accent-color), var(--primary-color)); /* Reverse gradient on hover */
 }
-
-
-
 /* -----------Contact section designs end------------ */
 /* -----------footer section designs start------------ */
-
 .footer-sec {
     background-color: var(--background-color); /* Dark background matching your theme */
     color: var(--text-color);
@@ -770,7 +763,6 @@ html{
     border-top: 1px solid var(--purple-shade-color);
     box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
 }
-
 .footer-sec .footer-content {
     width: 100%;
     max-width: 1200px;
@@ -780,7 +772,6 @@ html{
     flex-wrap: wrap;
     gap: 40px;
 }
-
 .footer-sec .footer-logo {
     font-family: "Oswald", serif;
     font-size: 2.5rem;
@@ -791,18 +782,15 @@ html{
     margin-bottom: 20px;
     text-align: center;
 }
-
 .footer-sec .footer-logo span {
     color: var(--primary-color);
 }
-
 .footer-sec .footer-links {
     display: flex;
     flex-direction: column;
     gap: 15px;
     font-family: "Montserrat", sans-serif;
 }
-
 .footer-sec .footer-links a {
     text-decoration: none;
     color: var(--text-color);
@@ -810,28 +798,23 @@ html{
     font-size: 1.1rem;
     transition: color 0.3s ease, transform 0.3s ease;
 }
-
 .footer-sec .footer-links a:hover {
     color: var(--nav-foot-hover-active-color);
     transform: translateX(5px);
 }
-
 .footer-sec .footer-socials {
     display: flex;
     gap: 20px;
     font-size: 1.7rem;
 }
-
 .footer-sec .footer-socials a {
     color: var(--text-color);
     transition: color 0.3s ease, transform 0.3s ease;
 }
-
 .footer-sec .footer-socials a:hover {
     color: var(--nav-foot-hover-active-color);
     transform: translateY(-5px);
 }
-
 /* Responsive Styling */
 @media (max-width: 768px) {
     .footer-sec .footer-content {
@@ -856,7 +839,6 @@ html{
         margin-top: 20px;
     }
 }
-
 .footer-sec .footer-bottom {
     margin-top: 40px;
     font-size: 1rem;
@@ -866,16 +848,13 @@ html{
     padding-top: 20px;
     border-top: 1px solid var(--purple-shade-color);
 }
-
 .footer-sec .footer-bottom a {
     text-decoration: none;
     color: var(--accent-color);
     font-weight: 600;
     transition: color 0.3s ease;
 }
-
 .footer-sec .footer-bottom a:hover {
     color: var(--nav-foot-hover-active-color);
 }
-
 /* here the footer-sec designs ended */
