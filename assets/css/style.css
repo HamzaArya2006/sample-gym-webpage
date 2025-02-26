@@ -40,14 +40,17 @@ html{
 }
 /* ----------navbar designs start---------- */
 
-.container .navbar{
-    font-family: "Montserrat", serif;
+/* General Navbar and Sidebar Styles */
+.container .navbar {
+    font-family: "Montserrat", sans-serif;
     font-optical-sizing: auto;
     font-weight: 400;
     font-style: normal;
     height: 60px;
     width: 100%;
     position: fixed;
+    top: 0;
+    left: 0;
     padding: 0 20px;
     display: flex;
     z-index: 100000;
@@ -55,7 +58,8 @@ html{
     align-items: center;
     background-color: var(--nav-foot-color);
 }
-.nav-top{
+
+.nav-top {
     list-style-type: none;
     height: 100%;
     width: 100%;
@@ -63,26 +67,34 @@ html{
     flex-direction: row;
     justify-content: flex-end;
     align-items: center;
+    padding: 0;
+    margin: 0;
 }
-.nav-top li:first-child{
-    margin-right: auto;
 
+.nav-top li:first-child {
+    margin-right: auto;
 }
-.nav-top .logo{
+
+.nav-top .logo {
     font-size: 2rem;
     color: var(--text-color);
     font-weight: 800;
     user-select: none;
+    cursor: pointer;
 }
-.nav-top li a{
+
+.nav-top li a {
     text-decoration: none;
-    padding: 5px 10px;
-    transition: color .3s ease;
+    padding: 10px 15px;
+    transition: color 0.3s ease;
     color: var(--text-color);
+    font-size: 1rem;
 }
-.nav-top li a:hover{
+
+.nav-top li a:hover {
     color: var(--nav-foot-hover-active-color);
 }
+
 
 /* -------------navbar designs end--------------- */
 /* ----------Hero section designs start---------- */
@@ -102,7 +114,6 @@ html{
     overflow: hidden;
 }
 
-/* Add the background zoom effect to the background image itself */
 .hero-sec::before {
     content: "";
     position: absolute;
@@ -113,26 +124,25 @@ html{
     background-image: inherit;
     background-size: cover;
     background-position: center;
-    z-index: -1; /* Ensures the background stays behind the content */
-    animation: zoomIn 10s infinite alternate; /* Background zoom effect */
+    z-index: -1;
+    animation: zoomIn 10s infinite alternate;
 }
 
-/* Content Styling */
 .hero-sec .hero-content {
-    height: 60vh;
-    width: 75%;
+    height: auto;
+    width: 90%;
+    max-width: 1200px;
     padding: 20px;
     z-index: 10;
-    animation: fadeIn 2s ease-out;
     text-align: center;
+    animation: fadeIn 2s ease-out;
 }
 
-/* Typewriter Effect for Heading */
 .hero-sec .hero-content .head-hero {
-    font-family: "Oswald", serif;
+    font-family: "Oswald", sans-serif;
     font-weight: 900;
     font-size: 4rem;
-    color: var(--primary-color); 
+    color: var(--primary-color);
     text-transform: uppercase;
     margin-bottom: 10px;
     overflow: hidden;
@@ -141,11 +151,6 @@ html{
     animation: typewriter 4s 1s forwards, blink 0.75s step-end infinite;
 }
 
-.head-hero span {
-    color: #949494;
-}
-
-/* Typewriter Animation */
 @keyframes typewriter {
     from {
         width: 0;
@@ -155,14 +160,12 @@ html{
     }
 }
 
-/* Blinking Cursor for Typewriter Effect */
 @keyframes blink {
     50% {
         border-color: transparent;
     }
 }
 
-/* Fade-in Animation */
 @keyframes fadeIn {
     0% {
         opacity: 0;
@@ -172,73 +175,54 @@ html{
     }
 }
 
-/* Background Zoom Animation */
 @keyframes zoomIn {
     0% {
         transform: scale(1);
     }
     100% {
-        transform: scale(1.1); /* Slight zoom for added dynamism */
+        transform: scale(1.1);
     }
 }
 
-/* Description Styling */
 .hero-sec .hero-content .p-hero {
-    font-family: "Montserrat", serif;
+    font-family: "Montserrat", sans-serif;
     font-weight: 600;
-    font-size: 2rem;
-    padding: 10px 30px;
-    opacity: 0;
-    animation: fadeIn 2s ease-out 2.5s forwards;
+    font-size: 1.8rem;
     margin-top: 20px;
+    animation: fadeIn 2s ease-out 2.5s forwards;
 }
 
-/* Button Styling */
 .hero-sec .hero-content .btn-hero {
-    font-family: "Montserrat", serif;
+    font-family: "Montserrat", sans-serif;
     font-weight: 700;
     font-size: 1.5rem;
-    margin: 1em 2em;
     padding: 12px 24px;
     border: none;
+    margin-top: 20px;
     border-radius: 50px;
-    background: linear-gradient(45deg, var(--primary-color), var(--accent-color)); 
+    background: linear-gradient(45deg, var(--primary-color), var(--accent-color));
     color: var(--background-color);
     cursor: pointer;
     transition: all 0.3s ease-in-out;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
     text-transform: uppercase;
-    opacity: 0;
     animation: fadeIn 2s ease-out 3.5s forwards;
 }
 
-/* Button Hover Effect */
 .hero-sec .hero-content .btn-hero:hover {
     transform: scale(1.05);
     box-shadow: 0 12px 20px rgba(0, 0, 0, 0.15);
     background: linear-gradient(45deg, var(--accent-color), var(--primary-color));
-    transform: translateY(-2px);
-}
-
-/* Button Focus Effect */
-.hero-sec .hero-content .btn-hero:focus {
-    outline: none;
-    box-shadow: 0 0 0 4px rgba(255, 255, 255, 0.6);
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
     .hero-sec .hero-content .head-hero {
         font-size: 3rem;
-        white-space: normal;
-        width: auto;
-        text-align: center;
     }
-
     .hero-sec .hero-content .p-hero {
         font-size: 1.5rem;
     }
-
     .hero-sec .hero-content .btn-hero {
         font-size: 1.3rem;
     }
@@ -248,15 +232,14 @@ html{
     .hero-sec .hero-content .head-hero {
         font-size: 2.5rem;
     }
-
     .hero-sec .hero-content .p-hero {
         font-size: 1.2rem;
     }
-
     .hero-sec .hero-content .btn-hero {
         font-size: 1.2rem;
     }
 }
+
 
 /* -------------Hero section designs end--------------- */
 /* ----------About section designs start---------- */
