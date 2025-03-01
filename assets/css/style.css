@@ -97,6 +97,42 @@ html{
 
 
 /* -------------navbar designs end--------------- */
+/* ----------here is the sidebar designs----------*/
+.sidebar{
+    height: 100vh;
+    width: 250px;
+    position: fixed;
+    right: 0;
+    top: 0;
+    display: none;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 8px;
+    align-items: center;
+    background-color: var(--nav-foot-color);
+    padding: 20px;
+}
+.sidebar li:first-child{
+    margin-left: auto;
+}
+.bar-icon{
+    display: none;
+    @media (width <= 768px){
+        display: block;
+    }
+}
+.sidebar li a{
+    text-decoration: none;
+    color: var(--text-color);
+    font-size: 1.2rem;
+    transition: color 0.3s ease;
+}
+.nav-top .hide_in_phone{
+    @media (width <= 768px){
+        display: none;
+    }
+}
+/* ----------here is the sidebar ends----------*/
 /* ----------Hero section designs start---------- */
 
 .container .hero-sec {
