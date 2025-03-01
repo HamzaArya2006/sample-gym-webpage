@@ -409,21 +409,52 @@ html{
 
 /* Responsive Design */
 @media (max-width: 1024px) {
+    .about-sec{
+        height: 100vh;
+        margin: 0;
+        /* padding: 0; */
+    }
     .about-sec-conts {
         flex-direction: column;
-        gap: 1.5rem;
+        gap: 0;
+        /* padding: 50px 0; */
+        background-color: transparent; /* Slight transparent background */
+    }
+    .about-content{
+        width: 90%;
+    }
+    .p-about{
+        font-size: 1.1rem;
+        width: 90%;
     }
     .about-sec .about-image, .about-sec .about-content {
-        width: 80%;
+        width: 100vh;
+        margin: 0;
+    }
+    .about-sec .about-image{
+        display: none;
+    }
+    .about-sec .about-image img {
+        height: 70%;
+        width: 90%;
+        border-radius: 1em;
+        object-fit: cover;
+        transition: transform 0.3s ease-in-out, filter 0.3s ease-in-out;
     }
 }
 
 @media (max-width: 768px) {
+    .about-sec-conts .about-content{
+        height: auto;
+        width: 90%;
+        box-sizing: border-box;
+    }
     .about-sec .head-about {
         font-size: 3rem;
     }
     .p-about {
-        font-size: 1.3rem;
+        font-size: 1.1rem;
+        width: auto;
     }
     .btn-about {
         font-size: 1.4rem;
@@ -497,6 +528,7 @@ html{
     padding: 3rem;
     background-color: #1e1e1e; /* Dark background for each box */
     transition: all 0.3s ease;
+    /* overflow: ; */
     box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.3); /* Darker shadow */
 }
 
@@ -558,8 +590,16 @@ html{
 
 /* Responsive Design */
 @media (max-width: 1024px) {
+    .services-sec{
+        height: 250vh;
+        margin-bottom: 100px;
+    }
     .box-services {
         width: 45%;
+        height: 48vh;
+    }
+    .p-boxes{
+        width: 100%;
     }
 }
 
@@ -664,6 +704,29 @@ html{
 
 .btn-signup:hover {
     background-color: var(--nav-foot-hover-active-color);
+}
+
+/* Responsive Design */
+@media (max-width : 1024px){
+    .pricings-sec{
+        margin-top: 20%;
+    }
+}
+@media (max-width : 768px){
+    .pricings-sec{
+        margin-top: 100%;
+        height: 100vh;
+    }
+    .pricing-plans{
+        flex-wrap: wrap;
+        gap: 1.5rem;
+    }
+    .plan-card{
+        width: 45%;
+    }
+    .price{
+        font-size: 1.4rem;
+    }
 }
 
 /* -----------pricings section designs end------------ */
